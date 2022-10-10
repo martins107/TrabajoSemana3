@@ -57,5 +57,10 @@ class MyUITableViewController: UITableViewController {
         let imageData : Data = try! Data(contentsOf: imgUrl)
         return UIImage(data: imageData)!
     }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        
+        performSegue(withIdentifier: "UITableViewToDetail", sender: nil)
+        
+    }
 
 }
