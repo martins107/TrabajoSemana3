@@ -13,8 +13,9 @@ class MyUITableViewController: UITableViewController {
     
     var carDetail : Car?
     
+
     
-    let arrayCar = [
+    var arrayCar = [
         Car (imgCell : "https://img.remediosdigitales.com/d442b6/a3l_drive_004_v2/840_560.jpg",
             carName : "Audi A3",
             carPrice : "15.000€",
@@ -50,8 +51,9 @@ class MyUITableViewController: UITableViewController {
             carPrice : "no price maG",
             carDescription: "El Toyota Supra (en japonés: トヨタ・スープラ Toyota Sūpura?) es un automóvil deportivo hatchback de 3 puertas con motor delantero montado longitudinalmente de tracción trasera, producido por el fabricante japonés Toyota desde 1979 hasta la actualidad. Hubo una pausa desde 2002 hasta su reinicio en 2019. En sus comienzos, el Supra derivaba del Toyota Celica, aunque ligeramente más largo y amplio. A partir de mediados de 1986, la tercera generación del Supra pasó a ser un modelo propio. El Supra también tiene sus raíces en el Toyota 2000GT, siendo el motor su principal ejemplo. Las tres primeras generaciones se ofrecieron con un descendiente directo a la M 2000GT del motor. Las cinco generaciones del Supra tienen un motor de seis cilindros en línea.",
             carCategory: "Deportivo")
-        
     ]
+    
+    
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrayCar.count

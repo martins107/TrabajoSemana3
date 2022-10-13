@@ -13,10 +13,11 @@ class DetailView : UIViewController{
     var car : Car?
     
     @IBOutlet weak var carImg: UIImageView!
-    @IBOutlet weak var carCategory: UIPickerView!
-    @IBOutlet weak var carPrice: UILabel!
     @IBOutlet weak var carName: UILabel!
+    @IBOutlet weak var carPrice: UILabel!
     @IBOutlet weak var carDescription: UILabel!
+    @IBOutlet weak var carCategory: UIPickerView!
+    
     
     
     override func viewDidLoad() {

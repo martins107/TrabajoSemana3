@@ -8,6 +8,72 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="tyd-K3-ysf">
+            <objects>
+                <viewController id="2v0-ts-715" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I95-NU-dP0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V0x-ok-rDZ">
+                                <rect key="frame" x="20" y="244" width="374" height="46"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Añadir Nuevo Coche">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="26"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZC-Yc-gb1">
+                                <rect key="frame" x="20" y="616" width="374" height="46"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Ver Todos Los Coches">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="26"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Wlf-W8-KhV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QZC-Yc-gb1" firstAttribute="leading" secondItem="Wlf-W8-KhV" secondAttribute="leading" constant="20" id="FcZ-Yi-NLX"/>
+                            <constraint firstItem="Wlf-W8-KhV" firstAttribute="bottom" secondItem="QZC-Yc-gb1" secondAttribute="bottom" constant="200" id="Ga1-Xq-dcF"/>
+                            <constraint firstItem="V0x-ok-rDZ" firstAttribute="leading" secondItem="Wlf-W8-KhV" secondAttribute="leading" constant="20" id="Uqh-Wi-USh"/>
+                            <constraint firstItem="V0x-ok-rDZ" firstAttribute="top" secondItem="Wlf-W8-KhV" secondAttribute="top" constant="200" id="f7W-yp-tzC"/>
+                            <constraint firstItem="Wlf-W8-KhV" firstAttribute="trailing" secondItem="QZC-Yc-gb1" secondAttribute="trailing" constant="20" id="fpX-br-QS4"/>
+                            <constraint firstItem="Wlf-W8-KhV" firstAttribute="trailing" secondItem="V0x-ok-rDZ" secondAttribute="trailing" constant="20" id="jff-h1-5nJ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nbV-Ig-lfb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2017" y="-692"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fFI-mB-69u">
+            <objects>
+                <viewController id="e6x-wb-kaK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tYL-Di-bLK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre del Coche" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9cz-hu-I70">
+                                <rect key="frame" x="10" y="144" width="394" height="63.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Keu-xa-rAK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Keu-xa-rAK" firstAttribute="trailing" secondItem="9cz-hu-I70" secondAttribute="trailing" constant="10" id="0Jh-np-dqK"/>
+                            <constraint firstItem="9cz-hu-I70" firstAttribute="leading" secondItem="Keu-xa-rAK" secondAttribute="leading" constant="10" id="iIq-hE-HvR"/>
+                            <constraint firstItem="9cz-hu-I70" firstAttribute="top" secondItem="Keu-xa-rAK" secondAttribute="top" constant="100" id="qzg-fX-jhe"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cw9-s2-DrG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-747" y="-379"/>
+        </scene>
         <!--MyUI Table View Controller-->
         <scene sceneID="h2h-xt-Hc9">
             <objects>
@@ -144,12 +210,11 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="carDescription" destination="fms-9T-B8S" id="Hin-Bx-rbx"/>
-                        <outlet property="category" destination="BqN-PX-vO4" id="8fy-lO-Xgc"/>
-                        <outlet property="description" destination="fms-9T-B8S" id="otI-6p-jFl"/>
-                        <outlet property="img" destination="2qN-Np-gH7" id="Xf8-BY-WDK"/>
-                        <outlet property="name" destination="Gio-0k-gP0" id="Zxz-IG-VWj"/>
-                        <outlet property="price" destination="pe7-Zm-QKO" id="Zz6-2I-OER"/>
+                        <outlet property="carCategory" destination="BqN-PX-vO4" id="OX2-7W-lGX"/>
+                        <outlet property="carDescription" destination="fms-9T-B8S" id="CUe-xP-6pc"/>
+                        <outlet property="carImg" destination="2qN-Np-gH7" id="L4U-tJ-cFR"/>
+                        <outlet property="carName" destination="Gio-0k-gP0" id="5XW-tG-aSf"/>
+                        <outlet property="carPrice" destination="pe7-Zm-QKO" id="tGk-KQ-T8e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="82e-Tl-6T9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
