@@ -10,13 +10,27 @@ import UIKit
 
 class DetailView : UIViewController{
     
+    var car : Car?
     
-    @IBOutlet weak var caImg: UIImageView!
+    @IBOutlet weak var carImg: UIImageView!
     @IBOutlet weak var carCategory: UIPickerView!
     @IBOutlet weak var carPrice: UILabel!
     @IBOutlet weak var carName: UILabel!
     @IBOutlet weak var carDescription: UILabel!
     
     
+    override func viewDidLoad() {
+        carImg.image = getImage(url : (car?.getImgUrl())!)
+        carName.text = car?.getCarName()
+        carPrice.text = car?.getCarPrice()
+        carDescription.text = car?.getCarDescription()
+        //carCategory = car.getCarCategory()
+        
+    }
+    func getImage(url : String) -> UIImage{
+        let imgUrl : URL = URL(string: url)!
+        let imageData : Data = try! Data(contentsOf: imgUrl)
+        return UIImage(data: imageData)!
+    }
     
 }
