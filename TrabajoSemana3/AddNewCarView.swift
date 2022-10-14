@@ -20,11 +20,13 @@ class AddNewCarView : UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UIPickerViewDelegate.self
-        UIPickerViewDataSource.self
+        carCategory.delegate = self
+        carCategory.dataSource = self
     }
     
-
+    carCategory.dataSource?.pickerView(UIPickerView, numberOfRowsInComponent: <#T##Int#>){
+        
+    }
     
     @IBAction func btnAdd(_ sender: Any) {
         
