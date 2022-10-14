@@ -11,6 +11,7 @@ import UIKit
 class AddNewCarView : UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UIPickerView{
     
     var carToAdd : Car?
+    var mainController : MyUITableViewController?
     
     @IBOutlet weak var carUrl: UITextField!
     @IBOutlet weak var carName: UITextField!
@@ -24,8 +25,8 @@ class AddNewCarView : UIViewController, UIPickerViewDataSource, UIPickerViewDele
         carCategory.dataSource = self
     }
     
-    carCategory.dataSource?.pickerView(UIPickerView, numberOfRowsInComponent: <#T##Int#>){
-        
+    func carCategory(_ carCategory: UIPickerView, numberOfRowsInSection section: Int) -> Int {
+        return (mainController?.arrayCar.count)!!
     }
     
     @IBAction func btnAdd(_ sender: Any) {
