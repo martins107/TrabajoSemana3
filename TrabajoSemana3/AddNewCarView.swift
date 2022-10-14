@@ -8,9 +8,10 @@
 import Foundation
 import UIKit
 
-class AddNewCarView : UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
+class AddNewCarView : UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UIPickerView{
     
     var carToAdd : Car?
+    var pickerView : UIPickerView!
     
     @IBOutlet weak var carUrl: UITextField!
     @IBOutlet weak var carName: UITextField!
@@ -19,6 +20,7 @@ class AddNewCarView : UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var carCategory: UIPickerView!
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         UIPickerViewDelegate.self
         UIPickerViewDataSource.self
     }
@@ -29,9 +31,6 @@ class AddNewCarView : UIViewController, UIPickerViewDataSource, UIPickerViewDele
         checkIsEmpty()
         carToAdd = [carUrl.text, carName.text, carPrice.text, carDescription.text, ]
         
-    }
-    func checkCategory(category : UIPickerView){
-        if category.value
     }
 
     func checkIsEmpty(){
