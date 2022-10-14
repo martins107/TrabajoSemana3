@@ -11,7 +11,6 @@ import UIKit
 class AddNewCarView : UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UIPickerView{
     
     var carToAdd : Car?
-    var pickerView : UIPickerView!
     
     @IBOutlet weak var carUrl: UITextField!
     @IBOutlet weak var carName: UITextField!
@@ -25,6 +24,7 @@ class AddNewCarView : UIViewController, UIPickerViewDataSource, UIPickerViewDele
         UIPickerViewDataSource.self
     }
     
+
     
     @IBAction func btnAdd(_ sender: Any) {
         
