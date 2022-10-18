@@ -16,7 +16,7 @@
 		334150F128F07C1A00DD522F /* TrabajoSemana3UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334150F028F07C1A00DD522F /* TrabajoSemana3UITestsLaunchTests.swift */; };
 		336FFE9C28FEFD2000118C3B /* CarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336FFE9B28FEFD2000118C3B /* CarService.swift */; };
 		336FFE9E28FEFD3F00118C3B /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336FFE9D28FEFD3F00118C3B /* CarModel.swift */; };
-		336FFEA028FEFD7000118C3B /* AllCars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336FFE9F28FEFD7000118C3B /* AllCars.swift */; };
+		336FFEA228FF0ACE00118C3B /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336FFEA128FF0ACE00118C3B /* PickerView.swift */; };
 		33AF04F928F08957004B8C88 /* MyUITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AF04F828F08957004B8C88 /* MyUITableViewController.swift */; };
 		33AF04FB28F08986004B8C88 /* ProtocolCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AF04FA28F08986004B8C88 /* ProtocolCar.swift */; };
 		33AF04FD28F089A0004B8C88 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AF04FC28F089A0004B8C88 /* Car.swift */; };
@@ -57,7 +57,7 @@
 		334150F028F07C1A00DD522F /* TrabajoSemana3UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrabajoSemana3UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		336FFE9B28FEFD2000118C3B /* CarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarService.swift; sourceTree = "<group>"; };
 		336FFE9D28FEFD3F00118C3B /* CarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModel.swift; sourceTree = "<group>"; };
-		336FFE9F28FEFD7000118C3B /* AllCars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCars.swift; sourceTree = "<group>"; };
+		336FFEA128FF0ACE00118C3B /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 		33AF04F828F08957004B8C88 /* MyUITableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUITableViewController.swift; sourceTree = "<group>"; };
 		33AF04FA28F08986004B8C88 /* ProtocolCar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolCar.swift; sourceTree = "<group>"; };
 		33AF04FC28F089A0004B8C88 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
@@ -129,7 +129,7 @@
 				33EEA1D428F9D04100E432DF /* AddNewCar.swift */,
 				336FFE9B28FEFD2000118C3B /* CarService.swift */,
 				336FFE9D28FEFD3F00118C3B /* CarModel.swift */,
-				336FFE9F28FEFD7000118C3B /* AllCars.swift */,
+				336FFEA128FF0ACE00118C3B /* PickerView.swift */,
 			);
 			path = TrabajoSemana3;
 			sourceTree = "<group>";
@@ -287,10 +287,10 @@
 				33EEA1D528F9D04100E432DF /* AddNewCar.swift in Sources */,
 				33AF04FF28F089BD004B8C88 /* myCell.swift in Sources */,
 				33AF04F928F08957004B8C88 /* MyUITableViewController.swift in Sources */,
+				336FFEA228FF0ACE00118C3B /* PickerView.swift in Sources */,
 				33AF04FD28F089A0004B8C88 /* Car.swift in Sources */,
 				336FFE9E28FEFD3F00118C3B /* CarModel.swift in Sources */,
 				336FFE9C28FEFD2000118C3B /* CarService.swift in Sources */,
-				336FFEA028FEFD7000118C3B /* AllCars.swift in Sources */,
 				334150CE28F07C1700DD522F /* AppDelegate.swift in Sources */,
 				334150D028F07C1700DD522F /* SceneDelegate.swift in Sources */,
 			);

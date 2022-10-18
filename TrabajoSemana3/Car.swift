@@ -14,14 +14,12 @@ class Car : ProtocolCar{
     var carName: String = ""
     var carPrice: String = ""
     var carDescription: String = ""
-    var carCategory: String = ""
     
     
-    init(imgCell: String, carName: String, carPrice:String, carDescription: String, carCategory: String){
+    init(imgCell: String, carName: String, carPrice:String, carDescription: String){
         self.imgUrl = imgCell
         self.carName = carName
         self.carPrice = carPrice
-        self.carCategory = carCategory
         self.carDescription = carDescription
     }
     func getImgUrl() -> String {
@@ -37,9 +35,6 @@ class Car : ProtocolCar{
     }
     func getCarDescription() -> String {
         return carDescription
-    }
-    func getCarCategory() -> String {
-        return carCategory
     }
     
 //    func setImgCell(imgCell: String) {
