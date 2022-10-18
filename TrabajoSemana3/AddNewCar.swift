@@ -8,7 +8,10 @@
 import Foundation
 import UIKit
 
-class AddNewCarView : UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UIPickerView{
+class AddNewCar : UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UIPickerView{
+    
+
+    
     
     var carToAdd : Car?
     var mainController : MyUITableViewController?
@@ -32,7 +35,12 @@ class AddNewCarView : UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBAction func btnAdd(_ sender: Any) {
         
         checkIsEmpty()
-        carToAdd = [carUrl.text, carName.text, carPrice.text, carDescription.text, ]
+        //carToAdd = [carUrl.text, carName.text, carPrice.text, carDescription.text]
+        carToAdd?.imgUrl = carUrl.text!
+        carToAdd?.carName = carName.text!
+        carToAdd?.carPrice = carPrice.text!
+        carToAdd?.carDescription = carDescription.text!
+        
         
     }
 
@@ -41,6 +49,13 @@ class AddNewCarView : UIViewController, UIPickerViewDataSource, UIPickerViewDele
         if carUrl.text == nil || carName.text == nil || carPrice.text == nil || carDescription.text == nil {
             print("Tienes que rellenar todos los campos")
         }
+    }
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        <#code#>
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        <#code#>
     }
     
 }

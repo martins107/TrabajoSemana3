@@ -14,13 +14,16 @@
 		334150E528F07C1A00DD522F /* TrabajoSemana3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334150E428F07C1A00DD522F /* TrabajoSemana3Tests.swift */; };
 		334150EF28F07C1A00DD522F /* TrabajoSemana3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334150EE28F07C1A00DD522F /* TrabajoSemana3UITests.swift */; };
 		334150F128F07C1A00DD522F /* TrabajoSemana3UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334150F028F07C1A00DD522F /* TrabajoSemana3UITestsLaunchTests.swift */; };
+		336FFE9C28FEFD2000118C3B /* CarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336FFE9B28FEFD2000118C3B /* CarService.swift */; };
+		336FFE9E28FEFD3F00118C3B /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336FFE9D28FEFD3F00118C3B /* CarModel.swift */; };
+		336FFEA028FEFD7000118C3B /* AllCars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336FFE9F28FEFD7000118C3B /* AllCars.swift */; };
 		33AF04F928F08957004B8C88 /* MyUITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AF04F828F08957004B8C88 /* MyUITableViewController.swift */; };
 		33AF04FB28F08986004B8C88 /* ProtocolCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AF04FA28F08986004B8C88 /* ProtocolCar.swift */; };
 		33AF04FD28F089A0004B8C88 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AF04FC28F089A0004B8C88 /* Car.swift */; };
 		33AF04FF28F089BD004B8C88 /* myCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AF04FE28F089BD004B8C88 /* myCell.swift */; };
 		33AF050328F08C8F004B8C88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33AF050228F08C8F004B8C88 /* Main.storyboard */; };
 		33B176CA28F4980400089CCF /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B176C928F4980400089CCF /* DetailView.swift */; };
-		33EEA1D528F9D04100E432DF /* AddNewCarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EEA1D428F9D04100E432DF /* AddNewCarView.swift */; };
+		33EEA1D528F9D04100E432DF /* AddNewCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EEA1D428F9D04100E432DF /* AddNewCar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,13 +55,16 @@
 		334150EA28F07C1A00DD522F /* TrabajoSemana3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrabajoSemana3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		334150EE28F07C1A00DD522F /* TrabajoSemana3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrabajoSemana3UITests.swift; sourceTree = "<group>"; };
 		334150F028F07C1A00DD522F /* TrabajoSemana3UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrabajoSemana3UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		336FFE9B28FEFD2000118C3B /* CarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarService.swift; sourceTree = "<group>"; };
+		336FFE9D28FEFD3F00118C3B /* CarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModel.swift; sourceTree = "<group>"; };
+		336FFE9F28FEFD7000118C3B /* AllCars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCars.swift; sourceTree = "<group>"; };
 		33AF04F828F08957004B8C88 /* MyUITableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUITableViewController.swift; sourceTree = "<group>"; };
 		33AF04FA28F08986004B8C88 /* ProtocolCar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolCar.swift; sourceTree = "<group>"; };
 		33AF04FC28F089A0004B8C88 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		33AF04FE28F089BD004B8C88 /* myCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myCell.swift; sourceTree = "<group>"; };
 		33AF050228F08C8F004B8C88 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		33B176C928F4980400089CCF /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-		33EEA1D428F9D04100E432DF /* AddNewCarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCarView.swift; sourceTree = "<group>"; };
+		33EEA1D428F9D04100E432DF /* AddNewCar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +126,10 @@
 				33AF04FE28F089BD004B8C88 /* myCell.swift */,
 				33AF050228F08C8F004B8C88 /* Main.storyboard */,
 				33B176C928F4980400089CCF /* DetailView.swift */,
-				33EEA1D428F9D04100E432DF /* AddNewCarView.swift */,
+				33EEA1D428F9D04100E432DF /* AddNewCar.swift */,
+				336FFE9B28FEFD2000118C3B /* CarService.swift */,
+				336FFE9D28FEFD3F00118C3B /* CarModel.swift */,
+				336FFE9F28FEFD7000118C3B /* AllCars.swift */,
 			);
 			path = TrabajoSemana3;
 			sourceTree = "<group>";
@@ -275,10 +284,13 @@
 			files = (
 				33AF04FB28F08986004B8C88 /* ProtocolCar.swift in Sources */,
 				33B176CA28F4980400089CCF /* DetailView.swift in Sources */,
-				33EEA1D528F9D04100E432DF /* AddNewCarView.swift in Sources */,
+				33EEA1D528F9D04100E432DF /* AddNewCar.swift in Sources */,
 				33AF04FF28F089BD004B8C88 /* myCell.swift in Sources */,
 				33AF04F928F08957004B8C88 /* MyUITableViewController.swift in Sources */,
 				33AF04FD28F089A0004B8C88 /* Car.swift in Sources */,
+				336FFE9E28FEFD3F00118C3B /* CarModel.swift in Sources */,
+				336FFE9C28FEFD2000118C3B /* CarService.swift in Sources */,
+				336FFEA028FEFD7000118C3B /* AllCars.swift in Sources */,
 				334150CE28F07C1700DD522F /* AppDelegate.swift in Sources */,
 				334150D028F07C1700DD522F /* SceneDelegate.swift in Sources */,
 			);
