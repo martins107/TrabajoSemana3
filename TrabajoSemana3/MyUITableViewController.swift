@@ -84,6 +84,7 @@ class MyUITableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         (segue.destination as? DetailView)?.car = carDetail
+        (segue.destination as? DetailView)?.mainViewController = self
         
     }
     

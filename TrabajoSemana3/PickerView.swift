@@ -9,13 +9,17 @@ import Foundation
 import UIKit
 
 
-class PickerView : UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
+class PickerView : UIPickerViewDelegate, UIPickerViewDataSource{
 
     
-    var mainViewController : MyUITableViewController = MyUITableViewController()
+    var mainViewController : MyUITableViewController!
+    var pickerView : UIPickerView
     
+    init(pickerView : UIPickerView){
+        self.pickerView = pickerView
+    }
     
-    let sections : [String] = (mainViewController.carModel.cars.)
+    let sections : [String] = [mainViewController?.carModel.cars[0].category, mainViewController?.carModel]
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         1
@@ -24,5 +28,7 @@ class PickerView : UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         sections.count
     }
-    
+//    func getSelectedCategory() -> String{
+//        self.pickerView.selectedRow(inComponent: 0)
+//    }
 }
