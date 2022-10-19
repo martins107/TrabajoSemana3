@@ -16,13 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V0x-ok-rDZ">
-                                <rect key="frame" x="20" y="244" width="374" height="46"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Añadir Nuevo Coche">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="26"/>
-                                </buttonConfiguration>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZC-Yc-gb1">
                                 <rect key="frame" x="20" y="616" width="374" height="46"/>
                                 <state key="normal" title="Button"/>
@@ -36,10 +29,7 @@
                         <constraints>
                             <constraint firstItem="QZC-Yc-gb1" firstAttribute="leading" secondItem="Wlf-W8-KhV" secondAttribute="leading" constant="20" id="FcZ-Yi-NLX"/>
                             <constraint firstItem="Wlf-W8-KhV" firstAttribute="bottom" secondItem="QZC-Yc-gb1" secondAttribute="bottom" constant="200" id="Ga1-Xq-dcF"/>
-                            <constraint firstItem="V0x-ok-rDZ" firstAttribute="leading" secondItem="Wlf-W8-KhV" secondAttribute="leading" constant="20" id="Uqh-Wi-USh"/>
-                            <constraint firstItem="V0x-ok-rDZ" firstAttribute="top" secondItem="Wlf-W8-KhV" secondAttribute="top" constant="200" id="f7W-yp-tzC"/>
                             <constraint firstItem="Wlf-W8-KhV" firstAttribute="trailing" secondItem="QZC-Yc-gb1" secondAttribute="trailing" constant="20" id="fpX-br-QS4"/>
-                            <constraint firstItem="Wlf-W8-KhV" firstAttribute="trailing" secondItem="V0x-ok-rDZ" secondAttribute="trailing" constant="20" id="jff-h1-5nJ"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -133,6 +123,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="zmh-ep-EAc">
+                            <rect key="frame" x="0.0" y="269" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                        </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" rowHeight="2" id="W66-aK-uec" customClass="MyCell" customModule="TrabajoSemana3">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="2"/>
@@ -198,7 +194,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QwT-JI-n4F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-706" y="-1363"/>
+            <point key="canvasLocation" x="-707.24637681159425" y="-1363.3928571428571"/>
         </scene>
         <!--Detail View-->
         <scene sceneID="J5H-E5-Wko">
@@ -235,7 +231,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BqN-PX-vO4" userLabel="Category">
+                            <pickerView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BqN-PX-vO4" userLabel="Category">
                                 <rect key="frame" x="10" y="580" width="394" height="242"/>
                             </pickerView>
                         </subviews>
