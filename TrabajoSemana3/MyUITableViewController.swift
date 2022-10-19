@@ -12,6 +12,10 @@ import UIKit
 class MyUITableViewController: UITableViewController {
 
     @IBOutlet weak var uiTableView : UITableView!
+    @IBAction func btnToAdd(_ sender: Any) {
+        
+        performSegue(withIdentifier: "UITableViewToAdd", sender: nil)
+    }
     
     var carDetail : Car?
     var carCategory : Int!
@@ -60,6 +64,8 @@ class MyUITableViewController: UITableViewController {
         (segue.destination as? DetailView)?.car = carDetail
         (segue.destination as? DetailView)?.mainViewController = self
         (segue.destination as? DetailView)?.category = carCategory
+        (segue.destination as? AddNewCar)?.mainController = self
+        
     }
     
     override func viewDidLoad() {
