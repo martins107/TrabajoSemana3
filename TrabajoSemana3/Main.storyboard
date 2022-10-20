@@ -13,7 +13,7 @@
             <objects>
                 <viewController id="e6x-wb-kaK" customClass="AddNewCarView" customModule="TrabajoSemana3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tYL-Di-bLK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre del Coche" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9cz-hu-I70">
@@ -43,7 +43,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="37"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="btnAdd:" destination="e6x-wb-kaK" eventType="touchUpInside" id="j69-s7-Obz"/>
+                                    <action selector="btnAdd:" destination="e6x-wb-kaK" eventType="touchUpInside" id="wqe-xC-2Xh"/>
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8aB-ah-K8f" userLabel="Category">
@@ -73,13 +73,14 @@
                             <constraint firstItem="Keu-xa-rAK" firstAttribute="trailing" secondItem="9cz-hu-I70" secondAttribute="trailing" constant="10" id="yT1-Fx-6Zb"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="NYP-YD-X40"/>
                     <connections>
-                        <outlet property="btnAdd" destination="140-hi-rUZ" id="065-zx-S1x"/>
-                        <outlet property="carCategory" destination="8aB-ah-K8f" id="ICE-nb-mou"/>
-                        <outlet property="carDescription" destination="Djb-Yd-xZf" id="uPt-qL-gK0"/>
-                        <outlet property="nameCar" destination="9cz-hu-I70" id="U3f-PV-Eud"/>
-                        <outlet property="priceCar" destination="gyh-Nd-peB" id="zMI-H6-tkM"/>
-                        <outlet property="urlCar" destination="e3N-1B-IeV" id="pkf-4k-DV1"/>
+                        <outlet property="carCategory" destination="8aB-ah-K8f" id="Xxy-ba-Btz"/>
+                        <outlet property="carDescription" destination="Djb-Yd-xZf" id="p4W-qD-XzZ"/>
+                        <outlet property="carName" destination="9cz-hu-I70" id="yFv-Se-bSz"/>
+                        <outlet property="carPrice" destination="gyh-Nd-peB" id="sYN-aF-6az"/>
+                        <outlet property="carUrl" destination="e3N-1B-IeV" id="9cV-vM-SxG"/>
+                        <segue destination="yw9-gD-JnO" kind="show" identifier="AddCarToUITableView" id="58E-sS-dzG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cw9-s2-DrG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -91,7 +92,7 @@
             <objects>
                 <tableViewController id="yw9-gD-JnO" customClass="MyUITableViewController" customModule="TrabajoSemana3" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="UoY-rM-6Qr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="8D4-AF-lqf">
@@ -102,7 +103,7 @@
                                 <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                             </buttonConfiguration>
                             <connections>
-                                <action selector="btnToAdd:" destination="yw9-gD-JnO" eventType="touchUpInside" id="B9v-mX-n2m"/>
+                                <segue destination="e6x-wb-kaK" kind="show" identifier="UITableViewToAdd" destinationCreationSelector="goToAdd:" id="rPz-VH-q4D"/>
                             </connections>
                         </button>
                         <prototypes>
@@ -164,6 +165,7 @@
                             <outlet property="delegate" destination="yw9-gD-JnO" id="H9R-Ds-uK2"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="A1f-i0-zqM"/>
                     <connections>
                         <segue destination="Qpq-F6-Cux" kind="showDetail" identifier="UITableViewToDetail" id="vup-QN-Rse"/>
                     </connections>
@@ -186,15 +188,6 @@
                                     <constraint firstAttribute="height" constant="250" id="jQG-13-Ekm"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fms-9T-B8S">
-                                <rect key="frame" x="10" y="440" width="394" height="120"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="IGB-2V-Eg1"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pe7-Zm-QKO">
                                 <rect key="frame" x="10" y="360" width="394" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
@@ -207,34 +200,42 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BqN-PX-vO4" userLabel="Category">
-                                <rect key="frame" x="10" y="580" width="394" height="242"/>
+                            <pickerView userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BqN-PX-vO4" userLabel="Category">
+                                <rect key="frame" x="10" y="606" width="394" height="216"/>
                             </pickerView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fIj-0X-FI8">
+                                <rect key="frame" x="15" y="440" width="384" height="138"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fEN-kz-X2e"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="fms-9T-B8S" firstAttribute="leading" secondItem="fEN-kz-X2e" secondAttribute="leading" constant="10" id="1pO-tI-7Lx"/>
-                            <constraint firstItem="BqN-PX-vO4" firstAttribute="top" secondItem="fms-9T-B8S" secondAttribute="bottom" constant="20" id="3HO-Jt-4Fp"/>
                             <constraint firstItem="Gio-0k-gP0" firstAttribute="leading" secondItem="fEN-kz-X2e" secondAttribute="leading" constant="10" id="6xQ-7q-y9p"/>
-                            <constraint firstItem="fms-9T-B8S" firstAttribute="top" secondItem="pe7-Zm-QKO" secondAttribute="bottom" constant="20" id="Bm5-ej-UmY"/>
-                            <constraint firstItem="fEN-kz-X2e" firstAttribute="trailing" secondItem="fms-9T-B8S" secondAttribute="trailing" constant="10" id="Bqr-J4-twQ"/>
                             <constraint firstItem="fEN-kz-X2e" firstAttribute="trailing" secondItem="pe7-Zm-QKO" secondAttribute="trailing" constant="10" id="Er7-BD-sct"/>
                             <constraint firstItem="2qN-Np-gH7" firstAttribute="leading" secondItem="fEN-kz-X2e" secondAttribute="leading" constant="10" id="F4L-HS-dsR"/>
                             <constraint firstItem="2qN-Np-gH7" firstAttribute="top" secondItem="OtY-Zd-PJW" secondAttribute="top" constant="10" id="Gtu-Ek-zvl"/>
                             <constraint firstItem="pe7-Zm-QKO" firstAttribute="top" secondItem="Gio-0k-gP0" secondAttribute="bottom" constant="20" id="IPE-HM-tcv"/>
                             <constraint firstItem="fEN-kz-X2e" firstAttribute="trailing" secondItem="Gio-0k-gP0" secondAttribute="trailing" constant="10" id="Oyh-7k-4xZ"/>
+                            <constraint firstItem="fIj-0X-FI8" firstAttribute="leading" secondItem="fEN-kz-X2e" secondAttribute="leading" constant="15" id="R1H-Sj-6YK"/>
+                            <constraint firstItem="fIj-0X-FI8" firstAttribute="top" secondItem="pe7-Zm-QKO" secondAttribute="bottom" constant="20" id="UDa-JG-gnC"/>
                             <constraint firstItem="fEN-kz-X2e" firstAttribute="trailing" secondItem="BqN-PX-vO4" secondAttribute="trailing" constant="10" id="ZQm-wb-nRp"/>
+                            <constraint firstAttribute="bottom" secondItem="fIj-0X-FI8" secondAttribute="bottom" constant="264" id="cPm-7i-e56"/>
+                            <constraint firstItem="fEN-kz-X2e" firstAttribute="trailing" secondItem="fIj-0X-FI8" secondAttribute="trailing" constant="15" id="eIe-T3-1kG"/>
                             <constraint firstItem="fEN-kz-X2e" firstAttribute="trailing" secondItem="2qN-Np-gH7" secondAttribute="trailing" constant="10" id="jPN-tv-U6N"/>
                             <constraint firstItem="fEN-kz-X2e" firstAttribute="bottom" secondItem="BqN-PX-vO4" secondAttribute="bottom" constant="20" id="ngL-SP-sVW"/>
                             <constraint firstItem="Gio-0k-gP0" firstAttribute="top" secondItem="2qN-Np-gH7" secondAttribute="bottom" constant="20" id="nmK-I6-xa9"/>
+                            <constraint firstItem="BqN-PX-vO4" firstAttribute="top" secondItem="fIj-0X-FI8" secondAttribute="bottom" constant="28" id="o2e-Up-CSZ"/>
                             <constraint firstItem="BqN-PX-vO4" firstAttribute="leading" secondItem="fEN-kz-X2e" secondAttribute="leading" constant="10" id="tf2-aU-4XP"/>
                             <constraint firstItem="pe7-Zm-QKO" firstAttribute="leading" secondItem="fEN-kz-X2e" secondAttribute="leading" constant="10" id="wnl-ts-sMd"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="carCategory" destination="BqN-PX-vO4" id="OX2-7W-lGX"/>
-                        <outlet property="carDescription" destination="fms-9T-B8S" id="CUe-xP-6pc"/>
                         <outlet property="carImg" destination="2qN-Np-gH7" id="L4U-tJ-cFR"/>
                         <outlet property="carName" destination="Gio-0k-gP0" id="5XW-tG-aSf"/>
                         <outlet property="carPrice" destination="pe7-Zm-QKO" id="tGk-KQ-T8e"/>
@@ -242,10 +243,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="82e-Tl-6T9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="499" y="-1363"/>
+            <point key="canvasLocation" x="498.55072463768118" y="-1363.3928571428571"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

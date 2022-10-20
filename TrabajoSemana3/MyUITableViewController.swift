@@ -12,15 +12,26 @@ import UIKit
 class MyUITableViewController: UITableViewController {
 
     @IBOutlet weak var uiTableView : UITableView!
-    @IBAction func btnToAdd(_ sender: Any) {
-        
-        performSegue(withIdentifier: "UITableViewToAdd", sender: nil)
-    }
+
     
+    @IBSegueAction func goToAdd(_ coder: NSCoder) -> AddNewCarView? {
+        return AddNewCarView(coder: coder)
+    }
     var carDetail : Car?
     var carCategory : Int!
     
-    var carModel: CarModel = CarModel()   
+    var carModel: CarModel = CarModel()
+    var carToAdd : CarService?
+    
+    var carToAddCategory : String = ""
+    var carToAddCars : [Car] = []
+    var checkAddCar = false
+    
+    
+
+    
+    
+
     
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -64,13 +75,16 @@ class MyUITableViewController: UITableViewController {
         (segue.destination as? DetailView)?.car = carDetail
         (segue.destination as? DetailView)?.mainViewController = self
         (segue.destination as? DetailView)?.category = carCategory
-        (segue.destination as? AddNewCar)?.mainController = self
+        (segue.destination as? AddNewCarView)?.mainController = self
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if checkAddCar{
+            carModel.cars.append(CarService.init(category: carToAddCategory, cars: carToAddCars))
+            checkAddCar = false
+        }
         carModel.initCars()
     }
-
 }

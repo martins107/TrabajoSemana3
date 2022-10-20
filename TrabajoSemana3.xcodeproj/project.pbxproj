@@ -22,7 +22,7 @@
 		33AF04FF28F089BD004B8C88 /* myCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AF04FE28F089BD004B8C88 /* myCell.swift */; };
 		33AF050328F08C8F004B8C88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33AF050228F08C8F004B8C88 /* Main.storyboard */; };
 		33B176CA28F4980400089CCF /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B176C928F4980400089CCF /* DetailView.swift */; };
-		33EEA1D528F9D04100E432DF /* AddNewCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EEA1D428F9D04100E432DF /* AddNewCar.swift */; };
+		33EEA1D528F9D04100E432DF /* AddNewCarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EEA1D428F9D04100E432DF /* AddNewCarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +62,7 @@
 		33AF04FE28F089BD004B8C88 /* myCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myCell.swift; sourceTree = "<group>"; };
 		33AF050228F08C8F004B8C88 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		33B176C928F4980400089CCF /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-		33EEA1D428F9D04100E432DF /* AddNewCar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCar.swift; sourceTree = "<group>"; };
+		33EEA1D428F9D04100E432DF /* AddNewCarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +124,7 @@
 				33AF04FE28F089BD004B8C88 /* myCell.swift */,
 				33AF050228F08C8F004B8C88 /* Main.storyboard */,
 				33B176C928F4980400089CCF /* DetailView.swift */,
-				33EEA1D428F9D04100E432DF /* AddNewCar.swift */,
+				33EEA1D428F9D04100E432DF /* AddNewCarView.swift */,
 				336FFE9B28FEFD2000118C3B /* CarService.swift */,
 				336FFE9D28FEFD3F00118C3B /* CarModel.swift */,
 			);
@@ -281,7 +281,7 @@
 			files = (
 				33AF04FB28F08986004B8C88 /* ProtocolCar.swift in Sources */,
 				33B176CA28F4980400089CCF /* DetailView.swift in Sources */,
-				33EEA1D528F9D04100E432DF /* AddNewCar.swift in Sources */,
+				33EEA1D528F9D04100E432DF /* AddNewCarView.swift in Sources */,
 				33AF04FF28F089BD004B8C88 /* myCell.swift in Sources */,
 				33AF04F928F08957004B8C88 /* MyUITableViewController.swift in Sources */,
 				33AF04FD28F089A0004B8C88 /* Car.swift in Sources */,

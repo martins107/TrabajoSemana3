@@ -8,51 +8,66 @@
 import Foundation
 import UIKit
 
-class AddNewCar : UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
+class AddNewCarView : UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
 
     
     var mainController : MyUITableViewController!
     var sections : [String] = []
-    var category : String!
+    var category : String = ""
+    var carToAdd : [Car] = []
+    let alert = UIAlertController(title: "DANGER", message: "FILL ALL FIELDS.", preferredStyle: UIAlertController.Style.alert)
+    
 
     @IBOutlet weak var carUrl: UITextField!
     @IBOutlet weak var carName: UITextField!
     @IBOutlet weak var carPrice: UITextField!
     @IBOutlet weak var carDescription: UITextField!
     @IBOutlet weak var carCategory: UIPickerView!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         carCategory.delegate = self
         carCategory.dataSource = self
         sections = [mainController.carModel.cars[0].category, mainController.carModel.cars[1].category, mainController.carModel.cars[2].category]
-        carCategory.selectedRow(inComponent: 0)
     }
-
 
     @IBAction func btnAdd(_ sender: Any) {
+        
+        
+        if carUrl.text!.isEmpty || carName.text!.isEmpty || carPrice.text!.isEmpty || carDescription.text!.isEmpty{
+            alert.addAction(UIAlertAction(title: "CLOSE", style: UIAlertAction.Style.default, handler: nil))
 
-        checkIsEmpty()
+            self.present(alert, animated: true, completion: nil)
+        }else{
+            carToAdd = [
+                Car(imgCell : carUrl.text!,
+                    carName : carName.text!,
+                    carPrice : carPrice.text!,
+                    carDescription: carDescription.text!)
+            ]
+            performSegue(withIdentifier: "AddCarToUITableView", sender: nil)
+        }
         
-        let carToAdd : [Car] = [
-            Car(imgCell : carUrl.text!,
-                carName : carName.text!,
-                carPrice : carPrice.text!,
-                carDescription: carDescription.text!)
         
-        ]
         
-        mainController.carModel.cars.append(CarService.init(category: category, cars: carToAdd))
-        
-
-
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        (segue.destination as? MyUITableViewController)?.carToAddCategory = category
+        (segue.destination as? MyUITableViewController)?.carToAddCars = carToAdd
+        (segue.destination as? MyUITableViewController)?.checkAddCar = true
     }
 
-    func checkIsEmpty(){
+    func checkIsEmpty() -> Bool{
 
-        if carUrl.text == nil || carName.text == nil || carPrice.text == nil || carDescription.text == nil {
-            print("Tienes que rellenar todos los campos")
+        if carUrl.text!.isEmpty || carName.text!.isEmpty || carPrice.text!.isEmpty || carDescription.text!.isEmpty {
+            
+            return false
+        }else{
+            return true
         }
+        
     }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         1

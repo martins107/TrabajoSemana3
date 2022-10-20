@@ -19,7 +19,7 @@ class DetailView : UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
     @IBOutlet weak var carImg: UIImageView!
     @IBOutlet weak var carName: UILabel!
     @IBOutlet weak var carPrice: UILabel!
-    @IBOutlet weak var carDescription: UILabel!
+    @IBOutlet weak var carDescription: UITextField!
     @IBOutlet weak var carCategory: UIPickerView!
     
     
